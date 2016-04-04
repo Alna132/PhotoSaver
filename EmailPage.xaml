@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="PhotoSaver.EmailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoSaver"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton x:Name="btnHome" Icon="Home" Label="Home" Click="btnHome_Click" />
+                <AppBarButton x:Name="btnCamera" Icon="Camera" Label="Camera" Click="btnCamera_Click" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub Header = "Email Page" FontSize="24"/>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,100,0,200" >
+            <TextBlock x:Name="tbkInfo" Text="Enter you email on the box below and press send to have your photo sent to you." HorizontalAlignment="Stretch" TextWrapping="WrapWholeWords" Height="100" />
+            <TextBox x:Name="txtEmail" Text="email address here" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" BorderBrush="Black" />
+            <Button x:Name="btnEmail" Content="Send" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" BorderBrush="Black" Click="btnEmail_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

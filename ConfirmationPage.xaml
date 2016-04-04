@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="PhotoSaver.ConfirmationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoSaver"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton x:Name="btnHome" Icon="Home" Label="Home" Click="btnHome_Click" />
+                <AppBarButton x:Name="btnCamera" Icon="Camera" Label="Camera" Click="btnCamera_Click" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub Header = "Photo Save Application" FontSize="24"/>
+        <TextBlock x:Name="tbkConfirm" Text="Photo has been saved!" FontSize="48" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,100,0,100" TextWrapping="WrapWholeWords" TextAlignment="Center" />
+    </Grid>
+</Page>
